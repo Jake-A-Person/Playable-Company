@@ -1,0 +1,18 @@
+﻿pm_pc_corp_simple_organization = {
+	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
+
+	is_default = yes
+
+	country_modifiers = {
+	}
+
+	state_modifiers = {
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
+	}
+}
