@@ -6,3 +6,15 @@
 		pm_pc_corp_simple_organization
 	}
 }
+
+pmg_base_building_pc_corp_construction_sector = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_pc_corp_wooden_buildings
+		pm_pc_corp_iron_frame_buildings
+		pm_pc_corp_steel_frame_buildings
+		pm_pc_corp_arc_welded_buildings
+	}
+}
