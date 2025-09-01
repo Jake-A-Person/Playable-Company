@@ -1,0 +1,55 @@
+﻿je_pc_update_modifers = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	possible = {
+		this = c:PCM
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			set_variable = {
+				name = pc_num_corp_admin
+				value = 0
+			}
+			every_country = {
+				limit = {
+					not = {
+						is_country_type = decentralized
+					}
+				}
+				every_scope_building = {
+					limit = {
+						owner = root
+						occupancy > 0.8
+					}
+					if = {
+						limit = {
+							is_building_type = building_pc_corp_administration
+						}
+						change_variable = {
+							name = pc_num_corp_admin
+							add = 1
+						}
+					}
+				}
+			}
+			change_variable = {
+				name = pc_num_corp_admin
+				#how much bureaucracy (how many builing you can own) with 1 corporate admin building
+				multiply = 20
+				round_to = 1
+			}
+			add_modifier = {
+				name = pc_corp_admin_bureau
+				multiplier = pc_num_corp_admin
+				#update each month so it auto clears
+				weeks = 1
+			}
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
