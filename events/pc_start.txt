@@ -20,11 +20,6 @@ pc_start.1 = {
 	
 	cooldown = { years = 200 }
 
-	trigger = {
-		is_player = yes
-		game_date >= 1836.1.2
-	}
-
 	option = {
 		name = pc_start.1.a
 		create_country = {
@@ -33,19 +28,5 @@ pc_start.1 = {
 			province = p:x0017A3
 			origin = root
 		}
-		create_treaty = {
-			binding_period = { years = 200 }
-			articles_to_create = { 
-				{
-					article = foreign_investment_rights
-					source_country = c:GBR
-					target_country = c:PCM
-				}
-			}
-			first_country = c:PCM
-			second_country = c:GBR
-			is_draft = no
-		}
-		play_as = c:PCM
 	}
 }
