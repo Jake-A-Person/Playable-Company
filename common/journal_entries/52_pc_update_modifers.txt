@@ -10,7 +10,7 @@
 	on_weekly_pulse = {
 		effect = {
 			set_variable = {
-				name = pc_num_corp_admin
+				name = pc_num_corp_admin_var
 				value = 0
 			}
 			every_country = {
@@ -29,21 +29,21 @@
 							is_building_type = building_pc_corp_administration
 						}
 						change_variable = {
-							name = pc_num_corp_admin
+							name = pc_num_corp_admin_var
 							add = 1
 						}
 					}
 				}
 			}
 			change_variable = {
-				name = pc_num_corp_admin
+				name = pc_num_corp_admin_var
 				#how much bureaucracy (how many builing you can own) with 1 corporate admin building
 				multiply = 20
 				round_to = 1
 			}
 			add_modifier = {
 				name = pc_corp_admin_bureau
-				multiplier = pc_num_corp_admin
+				multiplier = pc_num_corp_admin_var
 				#update each month so it auto clears
 				weeks = 1
 			}
