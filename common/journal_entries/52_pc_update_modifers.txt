@@ -24,17 +24,15 @@
 					}
 				}
 				every_scope_building = {
-					limit = {
-						owner = root
-						occupancy > 0.8
-					}
 					if = {
 						limit = {
 							is_building_type = building_pc_corp_administration
 						}
-						change_variable = {
-							name = pc_num_corp_admin_var
-							add = 1
+						ROOT = {
+							change_variable = {
+								name = pc_num_corp_admin_var
+								add = 1
+							}
 						}
 					}
 					else_if = {
@@ -43,30 +41,38 @@
 						}
 						if = {
 							limit = { has_active_production_method = pm_pc_corp_wooden_buildings }
-							change_variable = {
-								name = pc_corp_construction_var
-								add = 2
+							ROOT = {
+								change_variable = {
+									name = pc_corp_construction_var
+									add = 2
+								}
 							}
 						}
 						else_if = {
 							limit = { has_active_production_method = pm_pc_corp_iron_frame_buildings }
-							change_variable = {
-								name = pc_corp_construction_var
-								add = 5
+							ROOT = {
+								change_variable = {
+									name = pc_corp_construction_var
+									add = 5
+								}
 							}
 						}
 						else_if = {
 							limit = { has_active_production_method = pm_pc_corp_steel_frame_buildings }
-							change_variable = {
-								name = pc_corp_construction_var
-								add = 10
+							ROOT = {
+								change_variable = {
+									name = pc_corp_construction_var
+									add = 10
+								}
 							}
 						}
 						else_if = {
 							limit = { has_active_production_method = pm_pc_corp_arc_welded_buildings }
-							change_variable = {
-								name = pc_corp_construction_var
-								add = 15
+							ROOT = {
+								change_variable = {
+									name = pc_corp_construction_var
+									add = 15
+								}
 							}
 						}
 					}
@@ -76,17 +82,16 @@
 				name = pc_num_corp_admin_var
 				#how much bureaucracy (how many builing you can own) with 1 corporate admin building
 				multiply = 20
-				round_to = 1
 			}
 			add_modifier = {
 				name = pc_corp_admin_bureau
-				multiplier = pc_num_corp_admin_var
+				multiplier = var:pc_num_corp_admin_var
 				#update each month so it auto clears
 				weeks = 1
 			}
 			add_modifier = {
 				name = pc_corp_construction
-				multiplier = pc_corp_construction_var
+				multiplier = var:pc_corp_construction_var
 				#update each month so it auto clears
 				weeks = 1
 			}
