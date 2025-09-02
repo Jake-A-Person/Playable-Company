@@ -1,0 +1,14 @@
+﻿pc_select_building = {
+	is_shown = {
+		exists = c:PCM
+		this = c:PCM
+	}
+
+	possible = {
+		var:pc_num_free_corp_building_type_var > 0
+	}
+
+	when_taken = {
+		trigger_event = pc_select_corp_building.1
+	}
+}
