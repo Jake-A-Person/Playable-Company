@@ -6,6 +6,10 @@
 	possible = {
 		player = this
 	}
+	is_shown_when_inactive = {
+		always = yes
+		this = c:GBR
+	}
 
 	immediate = {
 		trigger_event = pc_start.1
@@ -16,6 +20,7 @@
 	on_timeout = {
 		play_as = c:PCM
 		c:PCM = {
+			activate_law = law_type:law_pc_corp_economy
 			create_treaty = {
 					binding_period = { years = 200 }
 					articles_to_create = { 
