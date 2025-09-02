@@ -27,11 +27,15 @@
 					if = {
 						limit = {
 							is_building_type = building_pc_corp_administration
+							levels_owned_by_country = {
+								target = root
+								value > 0
+							}
 						}
 						ROOT = {
 							change_variable = {
 								name = pc_num_corp_admin_var
-								add = 1
+								add = prev.level
 							}
 						}
 					}
@@ -39,12 +43,18 @@
 						limit = {
 							is_building_type = building_pc_corp_construction_sector
 						}
+						root = {
+							set_variable = {
+								name = pc_corp_num_construction_var
+								value = prev.level
+							}
+						}
 						if = {
 							limit = { has_active_production_method = pm_pc_corp_wooden_buildings }
 							ROOT = {
 								change_variable = {
-									name = pc_corp_construction_var
-									add = 2
+									name = pc_corp_num_construction_var
+									multiply = 2
 								}
 							}
 						}
@@ -52,8 +62,8 @@
 							limit = { has_active_production_method = pm_pc_corp_iron_frame_buildings }
 							ROOT = {
 								change_variable = {
-									name = pc_corp_construction_var
-									add = 5
+									name = pc_corp_num_construction_var
+									multiply = 5
 								}
 							}
 						}
@@ -61,8 +71,8 @@
 							limit = { has_active_production_method = pm_pc_corp_steel_frame_buildings }
 							ROOT = {
 								change_variable = {
-									name = pc_corp_construction_var
-									add = 10
+									name = pc_corp_num_construction_var
+									multiply = 10
 								}
 							}
 						}
@@ -70,9 +80,15 @@
 							limit = { has_active_production_method = pm_pc_corp_arc_welded_buildings }
 							ROOT = {
 								change_variable = {
-									name = pc_corp_construction_var
-									add = 15
+									name = pc_corp_num_construction_var
+									multiply = 15
 								}
+							}
+						}
+						root = {
+							change_variable = {
+								name = pc_corp_construction_var
+								add = var:pc_corp_num_construction_var
 							}
 						}
 					}
