@@ -1,0 +1,5 @@
+﻿l_english:
+ building_pc_corp_administration:0 "Corporate Administration Office"
+ building_pc_corp_administration_lens_option: "Expand $building_pc_corp_administration$"
+ building_pc_corp_construction_sector:0 "Corporate Construction Sector"
+ building_pc_corp_construction_sector_lens_option: "Expand $building_pc_corp_construction_sector$"
