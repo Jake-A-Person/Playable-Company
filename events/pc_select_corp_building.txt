@@ -144,6 +144,7 @@ pc_select_corp_building.1 = {
 	}
 	#exit
 	option = {
+		default_option = yes
 		name = pc_select_corp_building.1.q
 		change_variable = {
 			name = pc_num_free_corp_building_type_var
