@@ -22,7 +22,11 @@ pm_pc_corp_wooden_buildings = {
 
 	is_default = yes
 
+	#makes ai swich production methods
 	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 1
+		}
 	}
 
 	building_modifiers = {
@@ -56,7 +60,11 @@ pm_pc_corp_iron_frame_buildings = {
 	}
 
 	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2
+		}
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_wood_add = 40
@@ -91,6 +99,9 @@ pm_pc_corp_steel_frame_buildings = {
 	}
 
 	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 3
+		}
 	}
 
 	building_modifiers = {
