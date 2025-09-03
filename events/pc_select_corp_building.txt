@@ -3,6 +3,10 @@
 pc_select_corp_building.1 = {
 	type = country_event
 	placement = root
+	title = pc_select_corp_building.1.t
+	desc = pc_select_corp_building.1.d
+	flavor = pc_select_corp_building.1.f
+
 	
 	event_image = {
 		video = "asia_sepoy_mutiny"
