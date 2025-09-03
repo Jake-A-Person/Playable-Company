@@ -21,6 +21,20 @@
 		play_as = c:PCM
 		c:PCM = {
 			activate_law = law_type:law_pc_corp_economy
+			activate_law = law_type:law_oligarchy
+			activate_law = law_type:law_parliamentary_republic
+			activate_law = law_type:law_protected_speech
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_no_police
+			activate_law = law_type:law_no_schools
+			activate_law = law_type:law_no_colonial_affairs
+			activate_law = law_type:law_no_home_affairs
+			activate_law = law_type:law_no_workers_rights
+			activate_law = law_type:law_land_based_taxation
+			activate_law = law_type:law_slavery_banned
+			activate_law = law_type:law_isolationism
+			activate_law = law_type:law_no_health_system
+			activate_law = law_type:law_no_social_security
 			create_treaty = {
 					binding_period = { years = 200 }
 					articles_to_create = { 
@@ -34,6 +48,85 @@
 					second_country = root
 					is_draft = no
 				}
+			#no courty will try war
+			create_treaty = {
+				binding_period = { years = 200}
+				articles_to_create = {
+					{
+						article = guarantee_independence
+						source_country = c:GBR
+						target_country = this
+					}
+				}
+				first_country = c:GBR
+				second_country = this
+				is_draft = no
+			}
+			create_treaty = {
+				binding_period = { years = 200}
+				articles_to_create = {
+					{
+						article = guarantee_independence
+						source_country = c:USA
+						target_country = this
+					}
+				}
+				first_country = c:USA
+				second_country = this
+				is_draft = no
+			}
+			create_treaty = {
+				binding_period = { years = 200}
+				articles_to_create = {
+					{
+						article = guarantee_independence
+						source_country = c:FRA
+						target_country = this
+					}
+				}
+				first_country = c:FRA
+				second_country = this
+				is_draft = no
+			}
+			create_treaty = {
+				binding_period = { years = 200}
+				articles_to_create = {
+					{
+						article = guarantee_independence
+						source_country = c:AUS
+						target_country = this
+					}
+				}
+				first_country = c:AUS
+				second_country = this
+				is_draft = no
+			}
+			create_treaty = {
+				binding_period = { years = 200}
+				articles_to_create = {
+					{
+						article = guarantee_independence
+						source_country = c:RUS
+						target_country = this
+					}
+				}
+				first_country = c:RUS
+				second_country = this
+				is_draft = no
+			}
+			create_treaty = {
+				binding_period = { years = 200}
+				articles_to_create = {
+					{
+						article = guarantee_independence
+						source_country = c:PRU
+						target_country = this
+					}
+				}
+				first_country = c:PRU
+				second_country = this
+				is_draft = no
+			}
 				add_journal_entry = {
 					type = je_pc_update_modifers
 				}
