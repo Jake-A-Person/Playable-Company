@@ -28,6 +28,8 @@
 	modifier = {
 		country_disable_investment_pool_bool = yes
 
+		country_loan_interest_rate_mult = -0.75
+		#country_gold_reserve_limit_mult = 1
 		country_authority_mult = 0.25
 		country_bureaucrats_pol_str_mult = 0.25
 		building_nationalization_cost_mult = -0.5
