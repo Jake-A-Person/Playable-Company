@@ -1,0 +1,26 @@
+﻿je_pc_select_corp_building_buttons = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		this = c:PCM
+	}
+
+	scripted_button = pc_corp_building_spec_coal_scripted_button
+	scripted_button = pc_corp_building_spec_coffe_scripted_button
+	scripted_button = pc_corp_building_spec_food_scripted_button
+	scripted_button = pc_corp_building_spec_iron_scripted_button
+	scripted_button = pc_corp_building_spec_logging_scripted_button
+	scripted_button = pc_corp_building_spec_oil_scripted_button
+	scripted_button = pc_corp_building_spec_opium_scripted_button
+	scripted_button = pc_corp_building_spec_rubber_scripted_button
+	scripted_button = pc_corp_building_spec_steel_scripted_button
+	scripted_button = pc_corp_building_spec_tea_scripted_button
+	scripted_button = pc_corp_building_spec_textile_scripted_button
+	scripted_button = pc_corp_building_spec_tolling_scripted_button
+	scripted_button = pc_corp_building_spec_trade_scripted_button
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
