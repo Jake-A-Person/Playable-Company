@@ -2,30 +2,16 @@
 
 pc_start.1 = {
 	type = country_event
-	placement = root
-	
-	title = pc_start.1.t
-	desc = pc_start.1.d
-	flavor = pc_start.1.f
-	
-	event_image = {
-		video = "asia_sepoy_mutiny"
-	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-	
-	duration = 3
+	hidden = yes 
 	
 	cooldown = { years = 200 }
 
-	option = {
-		name = pc_start.1.a
+	immediate = {
 		create_country = {
 			tag = PCM
 			#alaska
-			province = p:x0017A3
+			province = p:xF9970B
 			origin = root
 		}
 	}
