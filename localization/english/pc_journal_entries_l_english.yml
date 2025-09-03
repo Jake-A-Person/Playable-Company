@@ -1,0 +1,7 @@
+﻿l_english:
+ je_pc_start: "Playable Comapany Start Up"
+ je_pc_start_reason: "When this times out you will start playing as a comapany"
+ je_pc_select_corp_building_buttons: "Primany Buildings"
+ je_pc_select_corp_building_buttons_reason: "A primany building is a building that we have chosen to become efficient in running hence we get a throughput bonus to them. You can select additional buildings with the above buttons if you have free primany building slots. You will gain slots from tech. \n[ROOT.Var('pc_num_free_corp_building_type_var').GetValue] slot(s) left"
+ je_pc_update_modifers: "Corporate Resources"
+ je_pc_update_modifers_reason: "As our comapany as grows we will need $concept_bureaucracy$ to manage our buildings which we can gain from $building_pc_corp_administration$s \nWe will also need $concept_construction$ to build more buildings at a faster rate which we can gain from $building_pc_corp_construction_sector$s \n(Note: the bulidng them selves dont give us any resources but each level we own will increase the effects of the $pc_corp_admin_bureau$ and $pc_corp_construction$ country modifers)"
