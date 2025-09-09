@@ -7,7 +7,7 @@ pc_add_corp_building_type.1 = {
 	hidden = yes 
 	
 	trigger = {
-		has_variable = pc_is_playable_comp
+		this = c:PCM
 		has_technology_researched = corporatism
 	}
 
@@ -27,7 +27,7 @@ pc_add_corp_building_type.2 = {
 	hidden = yes 
 	
 	trigger = {
-		has_variable = pc_is_playable_comp
+		this = c:PCM
 		has_technology_researched = corporate_management
 	}
 
@@ -47,7 +47,7 @@ pc_add_corp_building_type.3 = {
 	hidden = yes 
 	
 	trigger = {
-		has_variable = pc_is_playable_comp
+		this = c:PCM
 		has_technology_researched = corporate_charters
 	}
 
