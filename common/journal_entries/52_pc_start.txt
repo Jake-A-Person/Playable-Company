@@ -3,12 +3,11 @@
 
 	group = je_group_internal_affairs
 
-	possible = {
-		player = this
-	}
 	is_shown_when_inactive = {
-		always = yes
-		this = c:GBR
+		player = this
+		not = {
+			has_variable = pc_is_playable_comp
+		}
 	}
 
 	immediate = {
@@ -18,8 +17,12 @@
 	timeout = 14
 
 	on_timeout = {
-		play_as = c:PCM
-		c:PCM = {
+		random_country = {
+			limit = {
+				has_variable = pc_is_playable_comp
+			}
+			play_as = this
+
 			activate_law = law_type:law_pc_corp_economy
 			activate_law = law_type:law_oligarchy
 			activate_law = law_type:law_parliamentary_republic
@@ -41,10 +44,10 @@
 						{
 							article = foreign_investment_rights
 							source_country = ROOT
-							target_country = c:PCM
+							target_country = prev
 						}
 					}
-					first_country = c:PCM
+					first_country = prev
 					second_country = root
 					is_draft = no
 				}

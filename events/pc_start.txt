@@ -8,11 +8,25 @@ pc_start.1 = {
 	cooldown = { years = 200 }
 
 	immediate = {
-		create_country = {
-			tag = PCM
-			#alaska
-			province = p:xF9970B
-			origin = root
+		s:STATE_ALASKA = {
+			create_state = {
+				country = c:GBR
+				owned_provinces = { xF9970B }
+			}
+		}
+		random_state = {
+			limit = {
+				owner = c:GBR
+				state_region = s:STATE_ALASKA
+			}
+			create_dynamic_country = {
+				capital = this
+				#alaska
+				origin = root
+				on_created = {
+					set_variable = pc_is_playable_comp
+				}
+			}
 		}
 	}
 }

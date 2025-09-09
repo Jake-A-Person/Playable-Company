@@ -4,7 +4,7 @@
 	group = je_group_internal_affairs
 
 	is_shown_when_inactive = {
-		this = c:PCM
+		has_variable = pc_is_playable_comp
 	}
 
 	scripted_button = pc_corp_building_spec_coal_scripted_button
