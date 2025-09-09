@@ -8,5 +8,5 @@ pc_corp_construction = {
 }
 pc_corp_build_throughput = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	building_throughput_add = 0.6
+	building_throughput_add = 0.3
 }
