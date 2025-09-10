@@ -26,7 +26,7 @@
 	should_be_pinned_by_default = yes
 }
 
-je_pc_abb_corp_building_1 = {
+je_pc_add_corp_building_1 = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_internal_affairs
