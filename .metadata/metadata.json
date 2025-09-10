@@ -1,9 +1,9 @@
 {
   "name" : "Playable Company",
-	"id" : "",
-  "version" : "",
-  "supported_game_version" : "",
-  "short_description" : "",
+	"id" : "playable.company",
+  "version" : "1.0",
+  "supported_game_version" : "1.9.*",
+  "short_description" : "A mod that allows you to play as a company.",
   "tags" : [],
   "relationships" : [],
   "game_custom_data" : {
