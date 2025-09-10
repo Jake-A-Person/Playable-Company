@@ -4,6 +4,7 @@
 	group = je_group_internal_affairs
 
 	is_shown_when_inactive = {
+		exists = c:PCM
 		this = c:PCM
 	}
 
@@ -23,4 +24,79 @@
 
 	weight = 100
 	should_be_pinned_by_default = yes
+}
+
+je_pc_abb_corp_building_1 = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		exists = c:PCM
+		this = c:PCM
+	}
+	possible = {
+		has_technology_researched = joint_stock_companies
+	}
+	
+	immediate = {
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = 1
+		}
+	}
+
+	timeout = 10
+
+	weight = 0
+}
+
+je_pc_add_corp_building_2 = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		exists = c:PCM
+		this = c:PCM
+	}
+	possible = {
+		has_technology_researched = mutual_funds
+	}
+	
+	immediate = {
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = 1
+		}
+	}
+
+	timeout = 10
+
+	weight = 0
+}
+
+je_pc_add_corp_building_3 = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		exists = c:PCM
+		this = c:PCM
+	}
+	possible = {
+		has_technology_researched = corporate_management
+	}
+	
+	immediate = {
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = 1
+		}
+	}
+
+	timeout = 10
+
+	weight = 0
 }
