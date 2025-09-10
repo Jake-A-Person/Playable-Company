@@ -7,7 +7,7 @@
 		this = c:PCM
 	}
 
-	on_weekly_pulse = {
+	on_monthly_pulse = {
 		effect = {
 			set_variable = {
 				name = pc_num_corp_admin_var
@@ -104,7 +104,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -116,7 +116,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -128,7 +128,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -140,7 +140,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -152,7 +152,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -164,7 +164,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -176,7 +176,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -186,7 +186,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -198,7 +198,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -210,7 +210,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -222,7 +222,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -234,7 +234,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 						else_if = {
@@ -246,7 +246,7 @@
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
-								weeks = 1
+								days = 30
 							}
 						}
 					}
@@ -261,13 +261,14 @@
 				name = pc_corp_admin_bureau
 				multiplier = var:pc_num_corp_admin_var
 				#update each month so it auto clears
-				weeks = 1
+				#30 days so there isn't any overlap
+				days = 30
 			}
 			add_modifier = {
 				name = pc_corp_construction
 				multiplier = var:pc_corp_construction_var
 				#update each month so it auto clears
-				weeks = 1
+				days = 30
 			}
 		}
 	}
