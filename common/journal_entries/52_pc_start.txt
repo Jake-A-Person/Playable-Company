@@ -7,8 +7,9 @@
 		player = this
 	}
 	is_shown_when_inactive = {
-		always = yes
-		this = c:GBR
+		not = {
+			exists = c:PCM
+		}
 	}
 
 	immediate = {
