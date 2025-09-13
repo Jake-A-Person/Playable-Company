@@ -34,7 +34,7 @@
 			activate_law = law_type:law_no_workers_rights
 			activate_law = law_type:law_land_based_taxation
 			activate_law = law_type:law_slavery_banned
-			activate_law = law_type:law_mercantilism
+			activate_law = law_type:law_pc_corp_trade
 			activate_law = law_type:law_no_health_system
 			activate_law = law_type:law_no_social_security
 			create_treaty = {
@@ -136,9 +136,19 @@
 				name = pc_num_free_corp_building_type_var
 				value = 1
 			}
+			every_scope_state = {
+				create_building = {
+					building = building_food_industry
+					add_ownership={
+						country={
+							country="c:PCM"
+							levels=5
+						}
+					}
+				}
+			}
 		}
 	}
-
 	weight = 100
 	should_be_pinned_by_default = yes
 }
