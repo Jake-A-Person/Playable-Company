@@ -14,8 +14,8 @@ pc_hq_add_money_offset = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	#removes all throughput on building 
 	#1.0 for 100% 
-	#0.2768 for the company modifier
-	building_throughput_add = -1.278
+	#0.269 for the company modifier
+	building_throughput_add = -1.269
 }
 pc_hq_add_money_income_mult = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
