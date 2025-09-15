@@ -14,6 +14,9 @@ pc_clean_executive.1 = {
 		remove_trait = basic_entrepreneur
 		remove_trait = experienced_entrepreneur
 		remove_trait = expert_entrepreneur
+		#add traits so others don't get auto added
+		add_trait = reserved
+		add_trait = wrathful
 	}
 
 }
