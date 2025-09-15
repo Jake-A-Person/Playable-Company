@@ -37,6 +37,7 @@
 		country_government_dividends_efficiency_add = 0.65
 		country_private_construction_allocation_mult = 0.1
 		country_free_charters_add = 1
+		country_capitalists_pol_str_mult = -100
 
 		country_leverage_resistance_mult = 0.25
 	}
