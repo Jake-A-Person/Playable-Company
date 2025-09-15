@@ -3,3 +3,5 @@
  building_pc_corp_administration_lens_option: "Expand $building_pc_corp_administration$"
  building_pc_corp_construction_sector:0 "Corporate Construction Sector"
  building_pc_corp_construction_sector_lens_option: "Expand $building_pc_corp_construction_sector$"
+ building_pc_corp_hq_add_money:0 "Fake Company Income"
+ building_pc_corp_hq_add_moneylens_option:0 "This shouldn't be selectable :)"

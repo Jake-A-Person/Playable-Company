@@ -1,6 +1,6 @@
 ﻿l_english:
  je_pc_start: "Playable Comapany Start Up"
- je_pc_start_reason: "When this times out you will start playing as a comapany"
+ je_pc_start_reason: "When this times out you will start playing as a company"
  je_pc_select_corp_building_buttons: "Primary Buildings"
  je_pc_select_corp_building_buttons_reason: "A primany building is a building that we have chosen to become efficient in running hence we get a throughput bonus to them. You can select additional buildings with the above buttons if you have free primany building slots. You will gain slots from tech (see potential Journal Entries). \n[ROOT.Var('pc_num_free_corp_building_type_var').GetValue] slot(s) left"
  je_pc_update_modifers: "Corporate Resources"
@@ -11,3 +11,7 @@
  je_pc_add_corp_building_2_reason: "Increase Primary Building limit by 1"
  je_pc_add_corp_building_3: "Increase Primary Building limit"
  je_pc_add_corp_building_3_reason: "Increase Primary Building limit by 1"
+ je_pc_init_fake_company: "Create Comapany $PCM$ in the company menu"
+ je_pc_init_fake_company_reason: "$je_pc_init_fake_company$"
+ je_pc_update_fake_company: "Fake Comapany"
+ je_pc_update_fake_company_reason: "This updates the fake company and hence allows it to be shown in the company list"
