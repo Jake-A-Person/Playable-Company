@@ -132,13 +132,16 @@
 				add_journal_entry = {
 					type = je_pc_update_modifers
 				}
+				add_journal_entry = {
+					type = je_pc_init_fake_company
+				}
 			set_variable = {
 				name = pc_num_free_corp_building_type_var
 				value = 1
 			}
 			every_scope_state = {
 				create_building = {
-					building = building_food_industry
+					building = building_pc_corp_hq_add_money
 					add_ownership={
 						country={
 							country="c:PCM"
@@ -147,6 +150,17 @@
 					}
 				}
 			}
+		}
+		capital = {
+			create_building = {
+					building = building_pc_corp_hq_add_money
+					add_ownership={
+						country={
+							country=ROOT
+							levels=1
+						}
+					}
+				}
 		}
 	}
 	weight = 100

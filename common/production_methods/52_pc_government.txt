@@ -169,3 +169,34 @@ pm_pc_corp_arc_welded_buildings = {
 
 	required_input_goods = electricity
 }
+
+pm_pc_corp_hq_add_money = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	disallowing_laws = {
+		law_pc_corp_economy
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			goods_output_gold_add = 10
+			building_employment_laborers_add = 10
+		}
+	}
+}
+
+pm_pc_corp_hq_add_money_no_money = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_laws = {
+		law_pc_corp_economy
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 10
+		}
+	}
+}

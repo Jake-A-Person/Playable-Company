@@ -1,0 +1,91 @@
+﻿je_pc_init_fake_company = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	possible = {
+		this = c:PCM
+	}
+	
+	complete = {
+		any_company = {
+			is_company_type = company_type:company_pc_fake
+		}
+	}
+
+	on_complete = {
+		add_journal_entry = {
+			type = je_pc_update_fake_company
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_pc_update_fake_company = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	immediate = {
+		random_state = {
+			limit = {
+				not = {
+					owner = root
+				}
+				has_building = building_pc_corp_hq_add_money
+			}
+			remove_building = building_pc_corp_hq_add_money
+			create_building = {
+				reserves = 100
+				building = building_pc_corp_hq_add_money
+				add_ownership = {
+					company = {
+						type = company_pc_fake
+						country = ROOT
+						levels = 1
+					}
+				}
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_pc_corp_hq_add_money
+				}
+				add_modifier = pc_hq_add_money_offset
+				save_scope_as = scope_pc_company_hq_add_money
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_role = executive
+			}
+			trigger_event = pc_clean_executive.1
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			scope:scope_pc_company_hq_add_money = {
+				add_modifier = {
+					name = pc_hq_add_money_income_mult
+					multiplier = ROOT.weekly_net_fixed_income
+					days = 6
+				}
+			}
+		}
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			random_scope_character = {
+				limit = {
+					has_role = executive
+				}
+				trigger_event = pc_clean_executive.1
+			}
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}

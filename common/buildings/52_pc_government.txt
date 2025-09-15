@@ -49,3 +49,38 @@ building_pc_corp_construction_sector = {
 
 	ownership_type = self
 }
+
+building_pc_corp_hq_add_money = {
+	building_group = bg_pc_hq_add_money
+	icon = "gfx/interface/icons/building_icons/construction_camp.dds"
+	city_type = city
+	levels_per_mesh = 5
+
+	#will not be taxed (or contribute to GDP)
+	economic_contribution = 0.0
+
+	can_build_private = {
+		always = no
+	}
+
+	can_build_government = {
+		always = no
+	}
+
+	has_max_level = no
+
+	required_construction = 1
+	unlocking_technologies = {
+		urbanization
+	}
+	production_method_groups = {
+		pmg_base_building_pc_corp_hq_add_money
+	}
+
+	ai_value = -1000 #ai never build
+	ai_nationalization_desire = -1000 # ai never nationalize
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+
+	ownership_type = self
+}

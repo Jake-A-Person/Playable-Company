@@ -1,0 +1,11 @@
+﻿bg_pc_hq_add_money = {
+	category = urban
+
+	lens = heavy_industry
+
+	always_possible = yes
+
+	cash_reserves_max = 1000
+
+	foreign_investment_ai_factor = 0.25
+}

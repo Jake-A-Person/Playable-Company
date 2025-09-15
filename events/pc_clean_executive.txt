@@ -1,0 +1,19 @@
+﻿namespace = pc_clean_executive
+
+pc_clean_executive.1 = {
+	hidden = yes
+
+	type = character_event
+
+	immediate = {
+		remove_trait = notorious
+		remove_trait = ambitious
+		remove_trait = meticulous
+		remove_trait = master_bureaucrat
+		remove_trait = inept
+		remove_trait = basic_entrepreneur
+		remove_trait = experienced_entrepreneur
+		remove_trait = expert_entrepreneur
+	}
+
+}

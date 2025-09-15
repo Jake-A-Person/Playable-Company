@@ -10,3 +10,15 @@ pc_corp_build_throughput = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	building_throughput_add = 0.3
 }
+pc_hq_add_money_offset = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	#removes all throughput on building 
+	#1.0 for 100% 
+	#0.2768 for the company modifier
+	building_throughput_add = -1.278
+}
+pc_hq_add_money_income_mult = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	#building gives £1000 so this gives £1 do hence when multiplied by income will give income
+	building_throughput_add = 0.001
+}
