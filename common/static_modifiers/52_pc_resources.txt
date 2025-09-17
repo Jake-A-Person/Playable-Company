@@ -22,3 +22,8 @@ pc_hq_add_money_income_mult = {
 	#building gives £1000 so this gives £1 do hence when multiplied by income will give income
 	building_throughput_add = 0.001
 }
+pc_corp_building_cost_offset = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	#corp buildings give a -ve (value < 0) value so hence this will give a positive value when multiplied
+	country_tax_income_add = -1
+}

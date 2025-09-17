@@ -18,6 +18,14 @@
 				value = 0
 			}
 			every_country = {
+				#resets the var at the root for each country
+				#var is at root so can use prev scope
+				ROOT = {
+					set_variable = {
+						name = pc_corp_building_cost_var
+						value = 0
+					}
+				}
 				limit = {
 					not = {
 						is_country_type = decentralized
@@ -40,6 +48,14 @@
 								add = prev.level
 							}
 						}
+						#cant use prev and set var per conutry as putting
+						#a prev in a prev wont give the building scope
+						ROOT = {
+							change_variable = {
+								name = pc_corp_building_cost_var
+								add = prev.weekly_profit
+							}
+						}
 					}
 					else_if = {
 						limit = {
@@ -50,6 +66,13 @@
 								name = pc_corp_num_construction_var
 								value = prev.level
 							}
+						}
+						root = {
+							change_variable = {
+								name = pc_corp_building_cost_var
+								add = prev.weekly_profit
+							}
+
 						}
 						if = {
 							limit = { has_active_production_method = pm_pc_corp_wooden_buildings }
@@ -249,6 +272,23 @@
 								days = 30
 							}
 						}
+					}
+				}
+				#if this country has corp buildings
+				#then create a modifer to offset the cost
+				if = {
+					limit = {
+						not = {
+							root.var:pc_corp_building_cost_var = 0
+						}
+					}
+					add_modifier = {
+						name = pc_corp_building_cost_offset
+						#pc_corp_building_cost_offset is -1 
+						#pc_corp_building_cost_var is -ve (pc_corp_building_cost_var < 0)
+						#so the effect witll be +ve (effect > 0)
+						multiplier = root.var:pc_corp_building_cost_var
+						days = 30
 					}
 				}
 			}
