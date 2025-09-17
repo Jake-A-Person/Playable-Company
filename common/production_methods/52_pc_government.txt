@@ -180,7 +180,7 @@ pm_pc_corp_hq_add_money = {
 	building_modifiers = {
 		level_scaled = {
 			goods_output_gold_add = 10
-			building_employment_laborers_add = 10
+			building_employment_laborers_add = 100
 		}
 	}
 }
@@ -196,7 +196,7 @@ pm_pc_corp_hq_add_money_no_money = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_laborers_add = 10
+			building_employment_laborers_add = 100
 		}
 	}
 }
