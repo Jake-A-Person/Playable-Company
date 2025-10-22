@@ -22,6 +22,9 @@ pc_hq_add_money_income_mult = {
 	#building gives £1000 so this gives £1 do hence when multiplied by income will give income
 	building_throughput_add = 0.001
 }
+#the nation that the corp buliding is in will normally pay the cost this will offset the cost to the nation
+#use on nation the buliding is in and use the value of the "profit" from the building (the profit will be negative so this will give a postive modifier)
+#(used to be the case that both player company and nation would pay cost but this was removed by the game devs)
 pc_corp_building_cost_offset = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	#corp buildings give a -ve (value < 0) value so hence this will give a positive value when multiplied
