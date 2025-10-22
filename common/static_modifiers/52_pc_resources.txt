@@ -30,3 +30,9 @@ pc_corp_building_cost_offset = {
 	#corp buildings give a -ve (value < 0) value so hence this will give a positive value when multiplied
 	country_tax_income_add = -1
 }
+#use on the player company and use the value of the the "profit" from the building (the profit will be negative so this will give a negative modifier)
+pc_corp_building_cost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	#corp buildings give a -ve (value < 0) value so hence this will give a -ve value when multiplied
+	country_tax_income_add = 1
+}
