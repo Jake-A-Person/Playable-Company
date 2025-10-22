@@ -14,5 +14,25 @@ pc_start.1 = {
 			province = p:xF9970B
 			origin = root
 		}
+		c:PCM = {
+			set_state_religion = root.religion
+		}
+		# remove_primary_culture = cu:british
+		every_primary_culture = {
+			c:PCM = {
+				add_primary_culture = prev
+			}
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					this = cu:british
+					count = 0
+				}
+			}
+			c:PCM = { 
+				remove_primary_culture = cu:british
+			}
+		}
 	}
 }
