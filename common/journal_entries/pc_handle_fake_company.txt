@@ -29,6 +29,7 @@ je_pc_update_fake_company = {
 	group = je_group_internal_affairs
 
 	immediate = {
+		#finds the building that was created in pc_start that is in the country that is being invested in
 		random_state = {
 			limit = {
 				not = {
@@ -36,6 +37,7 @@ je_pc_update_fake_company = {
 				}
 				has_building = building_pc_corp_hq_add_money
 			}
+			#change building ownership by removing the building and making a new one with correct ownership
 			remove_building = building_pc_corp_hq_add_money
 			create_building = {
 				reserves = 100
@@ -52,10 +54,12 @@ je_pc_update_fake_company = {
 				limit = {
 					is_building_type = building_pc_corp_hq_add_money
 				}
+				#sets the building profit to be the player company profit
 				add_modifier = pc_hq_add_money_offset
 				save_scope_as = scope_pc_company_hq_add_money
 			}
 		}
+		#make sure the executive has no modifers that will effect building profit
 		random_scope_character = {
 			limit = {
 				has_role = executive
@@ -67,9 +71,12 @@ je_pc_update_fake_company = {
 	on_weekly_pulse = {
 		effect = {
 			scope:scope_pc_company_hq_add_money = {
+				#update the profit of the fake money building to be in line with
+				#current profit of player company
 				add_modifier = {
 					name = pc_hq_add_money_income_mult
 					multiplier = ROOT.weekly_net_fixed_income
+					#with 1 week will still be active on day 7 so the modifer would be on twice for 1 day
 					days = 6
 				}
 			}
@@ -78,6 +85,7 @@ je_pc_update_fake_company = {
 
 	on_yearly_pulse = {
 		effect = {
+			#make sure the executive has no modifers that will effect building profit
 			random_scope_character = {
 				limit = {
 					has_role = executive
