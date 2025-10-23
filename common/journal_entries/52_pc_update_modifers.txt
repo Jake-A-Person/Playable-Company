@@ -290,7 +290,18 @@
 						multiplier = root.var:pc_corp_building_cost_var
 						days = 30
 					}
+					root = {
+						add_modifier = {
+							name = pc_corp_building_cost
+							#pc_corp_building_cost_offset is -1 
+							#pc_corp_building_cost_var is -ve (pc_corp_building_cost_var < 0)
+							#so the effect will be +ve (effect > 0)
+							multiplier = var:pc_corp_building_cost_var
+							days = 30
+						}
+					}
 				}
+
 			}
 			change_variable = {
 				name = pc_num_corp_admin_var
