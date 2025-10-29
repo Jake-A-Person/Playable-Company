@@ -24,6 +24,6 @@
 # Attributions
 <p>The mod icon is a modified in game asset hence created by paradox</p>
 
-#Other Notes
+# Other Notes
 
 <p>Feel free to give any feedback and/or recommendations<br> Thanks for looking at or playing my mod :) <br> Nothing depicted in the mod has any relevance to my views on politics or history.</p>
