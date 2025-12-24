@@ -217,7 +217,7 @@
 								root = {
 									has_variable = pc_corp_building_spec_tooling_var
 								}
-								is_building_type = building_tooling_workshops
+								is_building_type = building_tooling_workshop
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
@@ -229,7 +229,7 @@
 								root = {
 									has_variable = pc_corp_building_spec_textile_var
 								}
-								is_building_type = building_textile_mills
+								is_building_type = building_textile_mill
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
@@ -253,7 +253,7 @@
 								root = {
 									has_variable = pc_corp_building_spec_steel_var
 								}
-								is_building_type = building_steel_mills
+								is_building_type = building_steel_mill
 							}
 							add_modifier = {
 								name = pc_corp_build_throughput
