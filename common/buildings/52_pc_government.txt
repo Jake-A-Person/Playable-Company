@@ -57,7 +57,8 @@ building_pc_corp_hq_add_money = {
 	levels_per_mesh = 5
 
 	#will not be taxed (or contribute to GDP)
-	economic_contribution = 0.0
+	#economic_contribution was removed in 1.12 :( TODO rework so taxes wont effect it
+	# economic_contribution = 0.0
 
 	can_build_private = {
 		always = no
