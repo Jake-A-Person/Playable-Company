@@ -1,10 +1,12 @@
 ﻿############ GOVERNMENT BUILDINGS
 building_pc_corp_administration = {
-	building_group = bg_bureaucracy
+	building_group = bg_pc_corp
 	city_type = city
 
 	levels_per_mesh = 10
 	
+	#crated via tracking num of building_pc_corp_fake_administration in je_pc_update_modifers
+	buildable = no
 
 	unlocking_technologies = {
 		tech_bureaucracy
@@ -20,17 +22,48 @@ building_pc_corp_administration = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
+	ownership_type = no_ownership
+}
+
+building_pc_corp_fake_administration = {
+	building_group = bg_pc_corp_fake
+	city_type = city
+
+	levels_per_mesh = 10
+
+	unlocking_technologies = {
+		tech_bureaucracy
+	}
+
+	#only pm does nothing
+	production_method_groups = {
+		pmg_pc_corp_fake
+	}
+
+	buildable = yes
+
+	icon = "gfx/interface/icons/building_icons/building_government_administration.dds"
+
+	required_construction = construction_cost_very_low
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
 	ownership_type = self
 
 	ai_value = 0
 	ai_nationalization_desire = 0
 }
 
+
 building_pc_corp_construction_sector = {
-	building_group = bg_construction
+	building_group = bg_pc_corp
 	icon = "gfx/interface/icons/building_icons/construction_camp.dds"
 	city_type = city
 	levels_per_mesh = 5
+
+	#crated via tracking num of building_pc_corp_fake_administration in je_pc_update_modifers
+	buildable = no
+
 
 	has_max_level = no
 
@@ -47,7 +80,36 @@ building_pc_corp_construction_sector = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	ownership_type = no_ownership
+}
+
+building_pc_corp_fake_construction_sector = {
+	building_group = bg_pc_corp_fake
+	city_type = city
+
+	levels_per_mesh = 10
+
+	unlocking_technologies = {
+		tech_bureaucracy
+	}
+
+	#only pm does nothing
+	production_method_groups = {
+		pmg_pc_corp_fake
+	}
+
+	buildable = yes
+
+	icon = "gfx/interface/icons/building_icons/construction_camp.dds"
+
+	required_construction = construction_cost_very_low
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+
 	ownership_type = self
+
+	ai_value = 0
+	ai_nationalization_desire = 0
 }
 
 building_pc_corp_hq_add_money = {

@@ -7,6 +7,123 @@
 		this = c:PCM
 	}
 
+
+	on_weekly_pulse = {
+		effect = {
+			#update the number of corp admin buildings
+			every_state = {
+				limit = {
+					or = {
+						has_building = building_pc_corp_fake_administration
+						has_building = building_pc_corp_administration
+					}
+				}
+				if = {
+					limit = {
+						not = {
+							has_building = building_pc_corp_fake_administration
+						}
+					}
+					remove_building = building_pc_corp_administration
+				}
+				if = {
+					limit = {
+						not = {
+							has_building = building_pc_corp_administration
+						}
+					}
+					create_building = {
+						building = building_pc_corp_administration
+						level = b:building_pc_corp_fake_administration.level
+					}
+				}
+				else = {
+					if = {
+						#more fake levels then real levels then bring the number of real levels up to the number of fake levels
+						limit = {
+							b:building_pc_corp_fake_administration.level > b:building_pc_corp_administration.level
+						}
+						#will just add the number of levels needed
+						create_building = {
+							building = building_pc_corp_administration
+							level = b:building_pc_corp_fake_administration.level
+						}
+					}
+					else_if = {
+						#more real levels then fake levels then bring the number of real levels down to the number of fake levels
+						limit = {
+							b:building_pc_corp_fake_administration.level < b:building_pc_corp_administration.level
+						}
+						#remove all levels as create_building will only add levels not remove them
+						remove_building = building_pc_corp_administration
+						#will add the number of levels needed but wont remove any existing level (is a lang limitation)
+						create_building = {
+							building = building_pc_corp_administration
+							level = b:building_pc_corp_fake_administration.level
+						}
+					}
+					# else b:building_pc_corp_fake_administration.level = b:building_pc_corp_administration.level so no change in the levels so do nothing
+				}
+			}
+			#update the number of corp construction buildings
+			every_state = {
+				limit = {
+					or = {
+						has_building = building_pc_corp_fake_construction_sector
+						has_building = building_pc_corp_construction_sector
+					}
+				}
+				if = {
+					limit = {
+						not = {
+							has_building = building_pc_corp_fake_construction_sector
+						}
+					}
+					remove_building = building_pc_corp_construction_sector
+				}
+				if = {
+					limit = {
+						not = {
+							has_building = building_pc_corp_construction_sector
+						}
+					}
+					create_building = {
+						building = building_pc_corp_construction_sector
+						level = b:building_pc_corp_fake_construction_sector.level
+					}
+				}
+				else = {
+					if = {
+						#more fake levels then real levels then bring the number of real levels up to the number of fake levels
+						limit = {
+							b:building_pc_corp_fake_construction_sector.level > b:building_pc_corp_construction_sector.level
+						}
+						#will just add the number of levels needed
+						create_building = {
+							building = building_pc_corp_construction_sector
+							level = b:building_pc_corp_fake_construction_sector.level
+						}
+					}
+					else_if = {
+						#more real levels then fake levels then bring the number of real levels down to the number of fake levels
+						limit = {
+							b:building_pc_corp_fake_construction_sector.level < b:building_pc_corp_construction_sector.level
+						}
+						#remove all levels as create_building will only add levels not remove them
+						remove_building = building_pc_corp_construction_sector
+						#will add the number of levels needed but wont remove any existing level (is a lang limitation)
+						create_building = {
+							building = building_pc_corp_construction_sector
+							level = b:building_pc_corp_fake_construction_sector.level
+						}
+					}
+					# else b:building_pc_corp_fake_construction_sector.level = b:building_pc_corp_construction_sector.level so no change in the levels so do nothing
+				}
+			}
+
+		}
+	}
+
 	on_monthly_pulse = {
 		effect = {
 			set_variable = {
@@ -33,9 +150,13 @@
 				}
 				every_scope_building = {
 					limit = {
-						levels_owned_by_country = {
-							target = root
-							value > 0
+						or = {
+							levels_owned_by_country = {
+								target = root
+								value > 0
+							}
+							is_building_type = building_pc_corp_administration
+							is_building_type = building_pc_corp_construction_sector
 						}
 					}
 					if = {

@@ -1,5 +1,6 @@
 ﻿l_english:
  pm_pc_corp_simple_organization:0 "$pm_simple_organization$"
+ pm_pc_corp_fake:0 "None"
  pm_pc_corp_wooden_buildings:0 "$pm_wooden_buildings$"
  pm_pc_corp_iron_frame_buildings:0 "$pm_iron_frame_buildings$"
  pm_pc_corp_steel_frame_buildings:0 "$pm_steel_frame_buildings$"
@@ -7,5 +8,6 @@
  pm_pc_corp_hq_add_money:0 "Start Faking Money"
  pm_pc_corp_hq_add_money_no_money:0 "Stop Faking Money"
  pmg_base_building_pc_corp_administration:1 "$pm_base$"
+ pmg_pc_corp_fake:1 "$pm_base$"
  pmg_base_building_pc_corp_construction_sector:1 "$pm_base$"
  pmg_base_building_pc_corp_hq_add_money:1 "$pm_base$"

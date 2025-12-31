@@ -9,3 +9,38 @@
 
 	foreign_investment_ai_factor = 0.25
 }
+#for the buldings that create the resources
+bg_pc_corp = {
+	category = urban
+
+	lens = development
+
+	is_government_funded = yes
+
+	always_possible = yes
+
+	cash_reserves_max = 10
+
+	foreign_investment_ai_factor = 0
+
+	construction_efficiency_modifier = yes
+
+	self_investment_chance_modifier = no
+}
+#for the buldings that track the bg_pc_corp
+#diff as bg_pc_corp need to be "built by player but gov funded"
+bg_pc_corp_fake = {
+	category = urban
+
+	lens = development
+
+	always_possible = yes
+
+	cash_reserves_max = 10
+
+	foreign_investment_ai_factor = 0
+
+	construction_efficiency_modifier = yes
+
+	self_investment_chance_modifier = no
+}
