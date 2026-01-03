@@ -4,7 +4,10 @@
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_coal_var
-		var:pc_num_free_corp_building_type_var > 0
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
 	}
 	}
 	
@@ -32,7 +35,10 @@ pc_corp_building_spec_iron_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_iron_var
-		var:pc_num_free_corp_building_type_var > 0
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
 	}
 	}
 	
@@ -60,7 +66,10 @@ pc_corp_building_spec_oil_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_oil_var
-		var:pc_num_free_corp_building_type_var > 0
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
 	}
 	}
 	
@@ -88,7 +97,10 @@ pc_corp_building_spec_opium_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_opium_var
-		var:pc_num_free_corp_building_type_var > 0
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
 	}
 	}
 	
@@ -116,7 +128,10 @@ pc_corp_building_spec_coffe_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_coffe_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -143,7 +158,10 @@ pc_corp_building_spec_tea_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_tea_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -170,7 +188,10 @@ pc_corp_building_spec_food_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_food_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -197,7 +218,10 @@ pc_corp_building_spec_textile_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_textile_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -224,7 +248,10 @@ pc_corp_building_spec_tolling_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_tooling_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -251,7 +278,10 @@ pc_corp_building_spec_steel_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_steel_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -278,7 +308,10 @@ pc_corp_building_spec_logging_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_logging_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -305,7 +338,10 @@ pc_corp_building_spec_rubber_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_rubber_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -332,7 +368,10 @@ pc_corp_building_spec_trade_scripted_button = {
 
 	visible = { or = { 
 		has_variable = pc_corp_building_spec_trade_var
-		var:pc_num_free_corp_building_type_var > 0}
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
 	}
 	
 	possible = {
@@ -359,7 +398,10 @@ pc_corp_building_spec_trade_scripted_button = {
 
 # 	visible = { or = { 
 # 		has_variable = pc_corp_building_spec_[insert_building]_var
-# 		var:pc_num_free_corp_building_type_var > 0}
+# 		and = {
+		# 	has_variable = pc_num_free_corp_building_type_var
+		# 	var:pc_num_free_corp_building_type_var > 0
+		# }}
 # 	}
 	
 # 	possible = {
