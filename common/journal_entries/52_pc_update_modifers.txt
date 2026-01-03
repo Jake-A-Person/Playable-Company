@@ -325,7 +325,9 @@
 						}
 						else_if = {
 							limit = {
-								has_variable = pc_corp_building_spec_food_var
+								root = {
+									has_variable = pc_corp_building_spec_food_var
+								}
 								is_building_type = building_food_industry
 							}
 							add_modifier = {
