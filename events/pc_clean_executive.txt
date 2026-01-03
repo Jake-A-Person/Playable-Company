@@ -6,7 +6,6 @@ pc_clean_executive.1 = {
 	type = character_event
 
 	immediate = {
-		remove_trait = notorious
 		remove_trait = ambitious
 		remove_trait = meticulous
 		remove_trait = master_bureaucrat
