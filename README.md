@@ -10,7 +10,7 @@
   - The resources are applied to you via modifiers that get updated each month
 
 # How to install
-- Requires a 1.11.x installation of Victoria 3
+- Requires a 1.12.x installation of Victoria 3
 - If you have a steam installation
   - Go to https://steamcommunity.com/sharedfiles/filedetails/?id=3565642437
   - Click "Subscribe"
