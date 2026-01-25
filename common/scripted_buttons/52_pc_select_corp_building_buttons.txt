@@ -392,6 +392,96 @@ pc_corp_building_spec_trade_scripted_button = {
 	}
 }
 
+pc_corp_building_spec_arms_scripted_button = {
+	name = "pc_corp_building_spec_arms_scripted_button"
+	desc = "pc_corp_building_spec_arms_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_arms_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_arms_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_arms_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_artillery_scripted_button = {
+	name = "pc_corp_building_spec_artillery_scripted_button"
+	desc = "pc_corp_building_spec_artillery_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_artillery_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_artillery_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_artillery_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_munition_scripted_button = {
+	name = "pc_corp_building_spec_munition_scripted_button"
+	desc = "pc_corp_building_spec_munition_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_munition_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_munition_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_munition_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
 # pc_corp_building_spec_[insert_building]_scripted_button = {
 # 	name = "pc_corp_building_spec_[insert_building]_scripted_button"
 # 	desc = "pc_corp_building_spec_[insert_building]_scripted_button_desc"

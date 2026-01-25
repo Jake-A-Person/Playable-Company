@@ -395,6 +395,42 @@
 								days = 30
 							}
 						}
+						else_if = {
+							limit = {
+								root = {
+									has_variable = pc_corp_building_spec_arms_var
+								}
+								is_building_type = building_arms_industry
+							}
+							add_modifier = {
+								name = pc_corp_build_throughput
+								days = 30
+							}
+						}
+						else_if = {
+							limit = {
+								root = {
+									has_variable = pc_corp_building_spec_artillery_var
+								}
+								is_building_type = building_artillery_foundry
+							}
+							add_modifier = {
+								name = pc_corp_build_throughput
+								days = 30
+							}
+						}
+						else_if = {
+							limit = {
+								root = {
+									has_variable = pc_corp_building_spec_munition_var
+								}
+								is_building_type = building_munition_plant
+							}
+							add_modifier = {
+								name = pc_corp_build_throughput
+								days = 30
+							}
+						}
 					}
 				}
 				#if this country has corp buildings

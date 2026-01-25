@@ -26,3 +26,11 @@
  pc_corp_building_spec_logging_scripted_button_desc: "Make $building_logging_camp$ one of our primany buildings"
  pc_corp_building_spec_trade_scripted_button: "$building_trade_center$"
  pc_corp_building_spec_trade_scripted_button_desc: "Make $building_trade_center$ one of our primany buildings"
+
+ pc_corp_building_spec_arms_scripted_button: "$building_arms_industry$"
+ pc_corp_building_spec_arms_scripted_button_desc: "Make $building_arms_industry$ one of our primany buildings"
+
+ pc_corp_building_spec_artillery_scripted_button: "$building_artillery_foundry$"
+ pc_corp_building_spec_artillery_scripted_button_desc: "Make $building_artillery_foundry$ one of our primany buildings"
+ pc_corp_building_spec_munition_scripted_button: "$building_munition_plant$"
+ pc_corp_building_spec_munition_scripted_button_desc: "Make $building_munition_plant$ one of our primany buildings"

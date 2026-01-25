@@ -21,6 +21,9 @@
 	scripted_button = pc_corp_building_spec_textile_scripted_button
 	scripted_button = pc_corp_building_spec_tolling_scripted_button
 	scripted_button = pc_corp_building_spec_trade_scripted_button
+	scripted_button = pc_corp_building_spec_arms_scripted_button
+	scripted_button = pc_corp_building_spec_artillery_scripted_button
+	scripted_button = pc_corp_building_spec_munition_scripted_button
 
 	weight = 100
 	should_be_pinned_by_default = yes
