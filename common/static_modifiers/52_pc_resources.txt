@@ -22,6 +22,16 @@ pc_hq_add_money_income_mult = {
 	#building gives £1000 so this gives £1 do hence when multiplied by income will give income
 	building_throughput_add = 0.001
 }
+pc_comp_hq_owe_share_mult = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	#building takes £1 so this gives £1 do hence when multiplied by amount to remove
+	building_throughput_add = 1
+}
+pc_comp_hq_gain_share_mult = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	#building takes £1 so this gives £1 do hence when multiplied by amount to remove
+	country_tax_income_add = 1
+}
 #the nation that the corp buliding is in will normally pay the cost this will offset the cost to the nation
 #use on nation the buliding is in and use the value of the "profit" from the building (the profit will be negative so this will give a postive modifier)
 #(used to be the case that both player company and nation would pay cost but this was removed by the game devs)
@@ -35,4 +45,7 @@ pc_corp_building_cost = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	#corp buildings give a -ve (value < 0) value so hence this will give a -ve value when multiplied
 	country_tax_income_add = 1
+}
+pc_dummy_is_company_hq = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 }
