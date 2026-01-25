@@ -392,7 +392,7 @@ pc_corp_building_spec_trade_scripted_button = {
 	}
 }
 
-# pc_corp_building_spec_coal_scripted_button = {
+# pc_corp_building_spec_[insert_building]_scripted_button = {
 # 	name = "pc_corp_building_spec_[insert_building]_scripted_button"
 # 	desc = "pc_corp_building_spec_[insert_building]_scripted_button_desc"
 
