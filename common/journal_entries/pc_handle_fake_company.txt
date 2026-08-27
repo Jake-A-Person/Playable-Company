@@ -88,7 +88,7 @@ je_pc_update_fake_company = {
 			#make sure the executive has no modifers that will effect building profit
 			random_scope_character = {
 				limit = {
-					has_role = executive
+					has_role_of_type = executive
 				}
 				trigger_event = pc_clean_executive.1
 			}
