@@ -15,3 +15,4 @@
  je_pc_init_fake_company_reason: "$je_pc_init_fake_company$"
  je_pc_update_fake_company: "Fake Comapany"
  je_pc_update_fake_company_reason: "This updates the fake company and hence allows it to be shown in the company list"
+ je_pc_company_owners: "Company Shares"

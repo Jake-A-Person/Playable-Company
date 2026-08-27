@@ -10,71 +10,35 @@
 
 	on_weekly_pulse = {
 		effect = {
-			c:GBR = {
-				every_scope_building = {
-					limit = {
-						# is_building_type = building_company_headquarter
-						#has_modifier = goods_input_gold_add		
-						is_building_group = bg_company_headquarter 
-						not = {
-							is_building_group = bg_company_regional_headquarter
-						}		
-					}
-					
-					root = {
-						set_variable = {
-							name = pc_share_payout_var
-							value = prev.weekly_profit
-						}
-						change_variable = {
-							name = pc_share_payout_var
-							divide = 10
-						}
-						set_variable = {
-							name = pc_share_payout_mod_mult_var
-							value = var:pc_share_payout_var
-						}
-						change_variable = {
-							name = pc_share_payout_mod_mult_var
-							divide = prev.level
-						}
-						add_modifier = {
-							name = pc_comp_hq_gain_share_mult
-							multiplier = var:pc_share_payout_var
-							days = 6
-						}
-					}
-					add_modifier = {
-						name = pc_comp_hq_owe_share_mult
-						multiplier = root.var:pc_share_payout_mod_mult_var
-						days = 6
+			save_scope_as = scope_pc_pcm_country
+			every_country = {
+				limit = {
+					not = {has_variable = pc_done_company_ownership_var}
+					has_treaty_foreign_investment_rights_with = {
+						target =  ROOT
 					}
 				}
+				#makes sure that it doen't do nations more then one
+				set_variable = pc_done_company_ownership_var
 
-				every_company = {
-					# bg:bg_company_headquarter = {
-						
-					# }
-					# add_modifier = {
-					# 	name = pc_comp_hq_owe_share_mult
-					# 	multiplier = 1000
-					# 	days = 6
-					# }
-					set_variable = var_stufffff
-					# root = {
-					# 	add_modifier = {
-					# 		name = pc_comp_hq_gain_share_mult
-					# 		multiplier = 1000
-					# 		days = 6
-					# 	}
-					# }
+				trigger_event = pc_calc_company_owner.1
+				every_subject_or_below = {
+					limit = { not = {has_variable = pc_done_company_ownership_var} }
+					trigger_event = pc_calc_company_owner.1
 				}
+			}
+			every_country = {
+				limit = {
+					has_variable = pc_done_company_ownership_var
+				}
+				remove_variable = pc_done_company_ownership_var
 			}
 			add_modifier = {
 				name = pc_comp_hq_gain_share_mult
 				multiplier = 1000
 				days = 6
 			}
+			clear_saved_scope = scope_pc_pcm_country
 
 			#update the number of corp admin buildings
 			every_state = {

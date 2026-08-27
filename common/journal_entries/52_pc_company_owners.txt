@@ -1,0 +1,48 @@
+﻿je_pc_company_owners = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_internal_affairs
+
+	possible = {
+		this = c:PCM
+	}
+
+
+
+	on_weekly_pulse = {
+		effect = {
+			save_scope_as = scope_pc_pcm_country
+			every_country = {
+				limit = {
+					not = {has_variable = pc_done_company_ownership_var}
+					has_treaty_foreign_investment_rights_with = {
+						target =  ROOT
+					}
+				}
+				#makes sure that it doen't do nations more then one
+				set_variable = pc_done_company_ownership_var
+
+				trigger_event = pc_calc_company_owner.1
+				every_subject_or_below = {
+					limit = { not = {has_variable = pc_done_company_ownership_var} }
+					trigger_event = pc_calc_company_owner.1
+				}
+			}
+			every_country = {
+				limit = {
+					has_variable = pc_done_company_ownership_var
+				}
+				remove_variable = pc_done_company_ownership_var
+			}
+			add_modifier = {
+				name = pc_comp_hq_gain_share_mult
+				multiplier = 1000
+				days = 6
+			}
+			clear_saved_scope = scope_pc_pcm_country
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

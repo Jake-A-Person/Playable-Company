@@ -1,0 +1,428 @@
+﻿pc_company_owner_next_country_scripted_button = {
+	name = "pc_company_owner_next_country_scripted_button"
+	desc = "pc_company_owner_next_country_scripted_button_desc"
+
+	visible = {
+	always = yes
+	}
+	
+	possible = {
+		always = yes	
+	}
+
+	effect = {
+		ordered_country = {
+			limit = {
+				not = { has_variable = pc_selected_country_var }
+				not = { has_variable = pc_selected_country_after_this_var }
+				or = {
+					has_treaty_foreign_investment_rights_with = {
+						target =  ROOT
+					}
+					any_country = {
+						has_treaty_foreign_investment_rights_with = {
+							target =  ROOT
+						}
+						any_subject_or_below = {
+							
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+pc_corp_building_spec_iron_scripted_button = {
+	name = "pc_corp_building_spec_iron_scripted_button"
+	desc = "pc_corp_building_spec_iron_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_iron_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
+	}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_iron_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_iron_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_oil_scripted_button = {
+	name = "pc_corp_building_spec_oil_scripted_button"
+	desc = "pc_corp_building_spec_oil_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_oil_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
+	}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_oil_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_oil_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_opium_scripted_button = {
+	name = "pc_corp_building_spec_opium_scripted_button"
+	desc = "pc_corp_building_spec_opium_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_opium_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}
+	}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_opium_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_opium_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_coffe_scripted_button = {
+	name = "pc_corp_building_spec_coffe_scripted_button"
+	desc = "pc_corp_building_spec_coffe_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_coffe_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_coffe_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_coffe_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_tea_scripted_button = {
+	name = "pc_corp_building_spec_tea_scripted_button"
+	desc = "pc_corp_building_spec_tea_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_tea_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_tea_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_tea_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_food_scripted_button = {
+	name = "pc_corp_building_spec_food_scripted_button"
+	desc = "pc_corp_building_spec_food_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_food_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_food_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_food_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_textile_scripted_button = {
+	name = "pc_corp_building_spec_textile_scripted_button"
+	desc = "pc_corp_building_spec_textile_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_textile_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_textile_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_textile_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_tolling_scripted_button = {
+	name = "pc_corp_building_spec_tooling_scripted_button"
+	desc = "pc_corp_building_spec_tooling_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_tooling_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_tooling_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_tooling_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_steel_scripted_button = {
+	name = "pc_corp_building_spec_steel_scripted_button"
+	desc = "pc_corp_building_spec_steel_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_steel_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_steel_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_steel_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_logging_scripted_button = {
+	name = "pc_corp_building_spec_logging_scripted_button"
+	desc = "pc_corp_building_spec_logging_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_logging_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_logging_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_logging_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_rubber_scripted_button = {
+	name = "pc_corp_building_spec_rubber_scripted_button"
+	desc = "pc_corp_building_spec_rubber_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_rubber_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_rubber_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_rubber_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+pc_corp_building_spec_trade_scripted_button = {
+	name = "pc_corp_building_spec_trade_scripted_button"
+	desc = "pc_corp_building_spec_trade_scripted_button_desc"
+
+	visible = { or = { 
+		has_variable = pc_corp_building_spec_trade_var
+		and = {
+			has_variable = pc_num_free_corp_building_type_var
+			var:pc_num_free_corp_building_type_var > 0
+		}}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			text = pc_corp_building_is_spc_tt
+			not = {
+				has_variable = pc_corp_building_spec_trade_var
+			}
+		}
+	}
+
+	effect = {
+		set_variable = pc_corp_building_spec_trade_var
+		change_variable = {
+			name = pc_num_free_corp_building_type_var
+			add = -1
+		}
+	}
+}
+
+# pc_corp_building_spec_coal_scripted_button = {
+# 	name = "pc_corp_building_spec_[insert_building]_scripted_button"
+# 	desc = "pc_corp_building_spec_[insert_building]_scripted_button_desc"
+
+# 	visible = { or = { 
+# 		has_variable = pc_corp_building_spec_[insert_building]_var
+# 		and = {
+		# 	has_variable = pc_num_free_corp_building_type_var
+		# 	var:pc_num_free_corp_building_type_var > 0
+		# }}
+# 	}
+	
+# 	possible = {
+# 		custom_tooltip = {
+# 			text = pc_corp_building_is_spc_tt
+# 			not = {
+# 				has_variable = pc_corp_building_spec_[insert_building]_var
+# 			}
+# 		}
+# 	}
+
+# 	effect = {
+# 		set_variable = pc_corp_building_spec_[insert_building]_var
+# 		change_variable = {
+# 			name = pc_num_free_corp_building_type_var
+# 			add = -1
+# 		}
+# 	}
+# }
